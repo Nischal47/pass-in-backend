@@ -20,7 +20,7 @@ module.exports = {
     },
 
     generateToken: (result) => {
-        const secretkey = process.env.JWT_SECRET_KEY
+        const secretKey = process.env.JWT_SECRET_KEY
         const payload = {
             user: {
                 id: result.id,
@@ -30,7 +30,7 @@ module.exports = {
         };
         return jwt.sign(
             payload,
-            secretkey,
+            secretKey,
             {
                 expiresIn: 900
             },
